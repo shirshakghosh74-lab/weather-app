@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Weather App</h1>
+    <button id="darkModeToggle" class="dark-toggle">🌙</button>
+
+    <div class="search">
+  <div class="input-wrapper">
+    <input type="text" id="cityInput" placeholder="Enter city name" autocomplete="off">
+    <div id="suggestions" class="suggestions hidden"></div>
+  </div>
+  <button id="searchBtn">Search</button>
+</div>
+
+    <div id="weatherResult" class="result hidden">
+      <h2 id="cityName"></h2>
+      <img id="weatherIcon" src="" alt="" class="icon">
+      <p id="temp" class="temp"></p>
+      <button id="unitToggle" class="unit-btn">Switch to °F</button>
+      <p id="description"></p>
+      <div class="details">
+  <p>Humidity: <span id="humidity"></span>%</p>
+  <p>Wind: <span id="wind"></span> m/s</p>
+</div>
+<p class="feels-like">Feels like <span id="feelsLike"></span>°C</p>
+<div class="sun-times">
+  <p>🌅 <span id="sunrise"></span></p>
+  <p>🌇 <span id="sunset"></span></p>
+</div>
+        <div id="forecast" class="forecast"></div>
+    </div>
+
+    <p id="error" class="error hidden">City not found. Try again.</p>
+    <div id="recentSearches" class="recent-searches"></div>
+    <div id="loader" class="loader hidden"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
